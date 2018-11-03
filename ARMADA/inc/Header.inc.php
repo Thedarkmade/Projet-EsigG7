@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[ARMADA] Acceuil</title>
+<title>[ARMADA] <?php $onglet ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta http-equiv="content-language" content="fr" />
 <link href="css\Mise_en_page_Acceuil.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,6 @@
 <script type="text/javascript" src="file:js/coda-slider.1.1.1.pack.js"></script>
 	<script type="text/javascript" src="file:js/js.js"></script>
 <body>
-<span class="align-items-end">
 <div class="container">
 	<div class= "row">
         <div class="col">
@@ -61,4 +60,4 @@
 			</div>
         </div>
         </div>
-        </span>
+</html>
