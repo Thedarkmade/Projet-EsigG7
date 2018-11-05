@@ -1,5 +1,6 @@
    	<?php $p1=$p2=$p3=$p4=$p5=$p6=" ";?>
     <?php $p1="select";
+		  $onglet="Acceuil";
 	?>
 	<?php include("/inc/Header.inc.php");?>
 	<?php include("/inc/Sider.inc.php");?>

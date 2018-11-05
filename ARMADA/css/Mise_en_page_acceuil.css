@@ -170,6 +170,22 @@ footer {
 	font-size:10px;	
 }
 /*..................................................................................................*/
+/*......................................Valid_Champ..........................................*/
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: absolute; content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+}
+/*......................................................................................................*/
 /* Disposition tablette : 481px sur 768px. Hérite des styles de : Disposition mobile */
 
 @media only screen and (min-width: 481px) {
