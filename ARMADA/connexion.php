@@ -1,25 +1,28 @@
-   	<?php $p1=$p2=$p3=$p4=$p5=$p6=" ";?>
+   	<?php session_start() ?>
+	<?php $p1=$p2=$p3=$p4=$p5=$p6=" ";?>
     <?php $p2="select";
 		  $onglet="Connexion";
 	?>
 	<?php include("/inc/Header.inc.php");?>
 	<?php include("/inc/Sider.inc.php");?>
-		<div class="col-sm-6">
-    		  <div>
-    				<br/><br/><br/><br/><br/><br/>
-                    <label for="Login"></label>
- 				    <input type="text" id="Login" name="name" placeholder="Entrez votre login" size="25" required>
+		<div class="col-sm-5">
+        <form action="gestconnexion.php" method="post"> 
+       					<div id="intertitre">
+                          	<br/><br/>Connexion
+                        </div>
+    		  <div>	
+                    <br/>
+ 				    <input type="text" id="Login" name="login" placeholder="Entrez votre login" size="25" required>
                     <span class="validity"></span>
  			</div>
                 		  <div>
     				<br/>
-                    <label for="psw"></label>
- 				    <input type="password" id="psw" name="name" placeholder="Entrez votre mot de passe" size="25" required>
+ 				    <input type="password" id="psw" name="psw" placeholder="Entrez votre mot de passe" size="25" required>
                     <span class="validity"></span>
  			</div>
  			 <div>
              <br/>
-   				 <button>Connexion</button>
+   				 <button type="submit">Connexion</button>
  			</div>
-    
+    		</form>
     <?php include("/inc/Footer.inc.php");?>

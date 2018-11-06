@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[ARMADA] <?php $onglet ?></title>
+<title>[ARMADA] <?php echo $onglet ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta http-equiv="content-language" content="fr" />
 <link href="css\Mise_en_page_Acceuil.css" rel="stylesheet" type="text/css">
@@ -28,33 +28,33 @@
 			<div class="panelContainer">
 				<div class="panel" title="Panel 1">
 					 <div class="wrapper">
-						  <img src="file:photo_slider/ph1.jpg" alt="temp" />
+						  <img src="file://localhost/Armada/photo_slider/ph1.jpg" alt="temp" />
 					 </div> 
                      
 				</div>
 				<div class="panel" title="Panel 2">
 					 <div class="wrapper">
-						  <img src="file:photo_slider/ph2.jpg" alt="temp" />
+						  <img src="file://Armada/photo_slider/ph2.jpg" alt="temp" />
 					 </div>
                      
 				</div>	
 				<div class="panel" title="Panel 3">
 					<div class="wrapper">
-						  <img src="file:photo_slider/ph3.jpg" alt="temp" />  
+						  <img src="file://Armada/photo_slider/ph3.jpg" alt="temp" />  
 					</div>
 				</div>	
                 
 				<div class="panel" title="Panel 4">
 					<div class="wrapper">
-						 <img src="file:photo_slider/ph4.jpg" alt="temp" />																			 					</div>
+						 <img src="file://Armada/photo_slider/ph4.jpg" alt="temp" />																			 					</div>
 				</div>
               <div class="panel" title="Panel 5">
 				<div class="wrapper">
-					   <img src="file:photo_slider/ph5.jpg" alt="temp" />																			 					</div>
+					   <img src="file://ARMADA/photo_slider/ph5.jpg" alt="temp" />																			 					</div>
 				</div>
                 <div class="panel" title="Panel 6">
 					<div class="wrapper">
-						 <img src="file:photo_slider/ph6.jpg" alt="temp" />																			 					</div>
+						 <img src="file://ARMADA/photo_slider/ph6.jpg" alt="temp" />																			 					</div>
 				</div>
                 </div>
 			</div>
