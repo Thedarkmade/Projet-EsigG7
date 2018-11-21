@@ -87,7 +87,6 @@
          		<div >
                 <br/>
                      Fichier PDF: <br/>
-                     <input type="hidden" name="MAX_FILE_SIZE" value="999999999">
                     <input type="file" id="pdf" name="pdf">
                 </div>
                 Supprimer le PDF: <div >
@@ -96,7 +95,6 @@
                 <div >
                 <br/>
                      Photo: <br/>
-                     <input type="hidden" name="MAX_FILE_SIZE_ph" value="999999999">
                     <input type="file" id="photo" name="photo">
                 </div>
 

@@ -38,7 +38,6 @@
 		  $pht="";
 		  $tmp_img=$_FILES['photo']['tmp_name'];
 		  $tmp_pdf=$_FILES['pdf']['tmp_name'];
-		  
 		  		$fichier = strtr($fichier, 
 				 'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
 				 'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
@@ -69,13 +68,14 @@
 					if(!isset($erreur))
 					{
 						unlink('PDF/'.$id_pdf);
-						 move_uploaded_file($tmp_pdf, $dossierpdf.$pdf);
+						 
 						 $pdf=$fichier;
 					}else{
 					echo $erreur;
 					}
 				}else{
 				$pdf=$id_pdf;
+				
 				}
 				if(htmlspecialchars($photo)!=""){
 					
@@ -97,6 +97,7 @@
 				}else{
 				$pht=$id_image;
 				}
+				move_uploaded_file($tmp_pdf, $dossierpdf.$pdf);
 					include ("inc/ConnectBdd.inc.php");
 				
 					
