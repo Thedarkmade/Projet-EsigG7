@@ -1,10 +1,10 @@
    	<?php session_start() ?>
-	<?php $p1=$p2=$p3=$p4=$p5=$p6=" ";?>
+	<?php $p1=$p2=$p3=$p4=$p5=$p6=$p7=" ";?>
     <?php $p6="select";
 		  $onglet="SQALALA !";
 	?>
-	<?php include("/inc/Header.inc.php");?>
-	<?php include("/inc/Sider.inc.php");?>
+	<?php include("inc/Header.inc.php");?>
+	<?php include("inc/Sider.inc.php");?>
                         <div class="col-sm-5">
                         
                             <div id="intertitre">
@@ -19,4 +19,4 @@ tél. : 02.35.89.20.03
                           
                 
 
-<?php include("/inc/Footer.inc.php");?>
+<?php include("inc/Footer.inc.php");?>

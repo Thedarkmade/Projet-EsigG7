@@ -4,7 +4,7 @@
 </div>
 <footer>
 <div id="footer">
-Disigned by Thedarkmade
+Disigned <a href="easter_eggs/footerEE1.php" class="Lcolor" title="">by</a> Thedarkmade
 </div>
 </footer>
 </html>

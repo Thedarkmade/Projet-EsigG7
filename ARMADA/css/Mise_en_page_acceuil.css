@@ -54,6 +54,9 @@ body {
 	display : table;
 	width: 100%;
 }
+.Lcolor{
+	color:#000;
+}
 #LayoutDiv1 {
 	clear: both;
 	float: left;
@@ -110,6 +113,15 @@ ul#leftside li#select a {
 	margin:auto;
 	padding:5px;
 	color:#FFF;
+	background-color:rgba(200, 200, 200, 0.5);
+	font-size:20px;		
+}
+#contenu_centre_alt{
+	Text-align: center;
+	margin:auto;
+	padding:5px;
+	color:#000;
+	background-color:rgba(200, 200, 200, 0.5);
 	font-size:20px;		
 }
 #intertitre{

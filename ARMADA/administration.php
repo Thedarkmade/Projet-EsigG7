@@ -1,64 +1,36 @@
-<?php session_start() ?>
-    <?php include("inc/Header.inc.php");
-        if(isset($_POST['s-admin']) OR isset($_POST['s-owner']) OR isset($_POST['s-standard']) OR isset($_POST['d-user']) ){
-            
-               $conn = new mysqli('localhost','root','','armada') ;
-
-            if(isset($_POST['s-admin'])){
-                
-                $sql='UPDATE personne set nv_priv=1 WHERE login='.$_POST['login'];
-                
-            }
-            else if(isset($_POST['s-owner'])){
-                $sql='UPDATE personne set nv_priv=2 WHERE login='.$_POST['login'];
-            }
-            else if(isset($_POST['s-standard'])){
-                $sql='UPDATE personne set nv_priv=3 WHERE login='.$_POST['login'];
-
-            }
-            else if(isset($_POST['d-user'])){
-                $sql='DELETE FROM personne WHERE login='.$_POST['login'];
-
-            }
-
-            echo $sql;
-
-            $conn->query($sql);
-             echo $conn->error;
-            mysqli_close($conn);
-        }
-    ?>
-		<div class="col-sm-5">
-            <!-- Example single danger button -->
-        <div class="btn-group">
-        </div>
-                <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
-                <form method="post">
-                    <ul>
-                        <?php   $conn = new mysqli('localhost','root','','armada') ;
-                            $sql='SELECT nom,prenom,login FROM personne';
-                            $result=$conn->query($sql);
-                                if ($result->num_rows>0)
-                                    { while ($row=$result->fetch_assoc()) 
-                                        {   ?>
-
-                                            <li >
-
-                                            <input type="hidden" name='login' value="<?php echo $row['login']?>">
-                                            <span ><?php echo  $row['nom'] ." " .$row['prenom']?></span>
-                                            <button  type='submit' name = 's-admin'>set admin</button>
-                                            <button type='submit' name= ' s-owner'>set owner</button>
-                                            <button  type='submit'name= ' s-standard'>set standard user</button>
-
-                                            <button type='submit' name= ' d-user'>delete user</button>
-                                            </li>
-                                            <br>
-                                    <?php    }
-
-                                    } mysqli_close($conn); ?>
-                                    
-                    <!-- </div> -->
-                    </ul>
+   	<?php session_start() ?>
+	<?php $p1=$p2=$p3=$p4=$p5=$p6=$p7=" ";?>
+    <?php $p7="select";
+		  $onglet='Administration';
+	?>
+	<?php include("inc/Header.inc.php");?>
+	<?php include("inc/Sider.inc.php");?>
+		<div class="col-sm-5"> 
+        <?php if (isset($_SESSION['lvl']) && $_SESSION['lvl'] == 2){ ?>
+         <br/><br/> <div id="intertitre">
+        Selectionné un utilisateur:<br/><br/>
+		</div>       
+        <form action="gestusers.php" method="post">
+        <select name="login">
+                <?php
+    		include ("inc/ConnectBdd.inc.php");
+				$req_pre = mysqli_prepare($mysqli, 'SELECT `login` FROM `personne`');
+				mysqli_stmt_execute($req_pre);
+				mysqli_stmt_bind_result($req_pre,$login);
+				while (mysqli_stmt_fetch($req_pre)){?>
+                <option value="<?php echo $login ?>"><?php echo $login ?></option>
+                 
+				<?php
+				}
+				include ("inc/UconnectBdd.inc.php");
+				?>
+                </select>
+                <button  type="submit" />Voir </button>
                 </form>
-        </div>
+                </div>
+                </div>
+                <?php } else { ?>
+                <div id="intertitre">Vous devez etre administrateur pour acceder à cette page</div>
+                <?php } ?>
+                </div>
     <?php include("inc/Footer.inc.php");?>
