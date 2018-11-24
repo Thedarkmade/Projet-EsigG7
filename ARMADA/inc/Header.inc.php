@@ -17,7 +17,7 @@
 <body>
 <div class="container">
 	<div class= "row">
-        <div class="col">
+        <div class="col-md-12">
               	<div id="titre">
 	              	Armada 2019
                 </div>  
