@@ -1,7 +1,7 @@
    	<?php session_start() ?>
 	<?php $p1=$p2=$p3=$p4=$p5=$p6=$p7="";?>
     <?php $p4="select";
-			$imat=$_GET['imat'];	
+			$imat=$_GET['imat'];
     		include ("inc/ConnectBdd.inc.php");
 				$req_pre = mysqli_prepare($mysqli, 'SELECT * FROM `bateau` WHERE `matricule` =?');
 				mysqli_stmt_bind_param($req_pre, "s", $imat);
@@ -48,10 +48,12 @@
 <div class="col-md-4">               </div>
   <div class="col-md-4">
  			<br/><div id="contenu_centre_alt"><?php echo $description ?></div><br/><br/>
+
+	
         	<?php if ($id_pdf !=''){ ?>
 			<?php if (isset($_SESSION['login'])){ ?>
             <br/><input type='button' onclick="window.open('PDF/<?php echo $id_pdf ?>');" value="Telecharger le PDF" />
-            <?php }else{?>
+			<?php }else{?>
             <br/><input type="button" value="Telecharger le PDF(verouillé)" onClick="javascript:window.location.href='Unloged.php'"/>
             <?php }
 			}else{?>

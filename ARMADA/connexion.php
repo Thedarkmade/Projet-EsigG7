@@ -26,5 +26,8 @@
  			</div>
     		</form>
             <br/><input type="button" value="Inscription" onClick="javascript:document.location.href='Inscription.php'"/>
-</div>
+
+  <br/><br/>
+  <a href="Dommage.php" class="LAcolor"> Mots de passe oublié ?</a>
+  </div>
     <?php include("inc/Footer.inc.php");?>

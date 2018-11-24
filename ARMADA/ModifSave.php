@@ -67,7 +67,7 @@
 					}
 					if(!isset($erreur))
 					{
-						unlink('PDF/'.$id_pdf);
+						//unlink('PDF/'.$id_pdf);
 						 
 						 $pdf=$fichier;
 					}else{
